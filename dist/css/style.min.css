@@ -1,1 +1,6 @@
-body{background-color:#333;display:flex;justify-content:center;align-items:center}
+body {
+	background-color: rgb(5, 27, 51);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
