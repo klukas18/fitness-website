@@ -5,17 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <script src="./dist/js/main.min.js" defer></script>
     <link rel="stylesheet" href="./dist/css/style.min.css">
 </head>
 
 <body>
-    <nav class="nav">
-        <img src="./src/img/logo.png" alt="Page logo">
+    <nav>
+        <div class="wrapper">
+            <div class="nav">
+                <img class="nav__item" src="./src/img/logo.png" alt="Page logo">
+                <button class="nav__item" href="">Sign in</button>
+            </div>
+        </div>
     </nav>
-
-
-
+    <main>
+        <div class="wrapper">
+            <div class="container">
+                <div class="container__intro">
+                    <h1>Begin your <br> <span class="text-gradient">fitness journey</span> today</h1>
+                    <h2>Click below to start!</h2>
+                    <br>
+                    <button class="intro-button">Start now</button>
+                </div>
+                <div class="container__card"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper">
+            <div class="footer-bottom-text">&nbsp; &copy; <span class="footer-year"></span> //
+                Gainzzu Fitness
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
