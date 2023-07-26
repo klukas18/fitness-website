@@ -1,3 +1,6 @@
+
+
+
 const footerYear = document.querySelector('.footer-year')
 
 const handleCurrentYear = () => {
