@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gainzzu Fitness</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
@@ -16,8 +16,8 @@
     <nav>
         <div class="wrapper">
             <div class="nav">
-                <img class="nav__item" src="./src/img/logo.png" alt="Page logo">
-                <button class="nav__item nav-button" href="">Sign in</button>
+                <a href="./index.html"><img class="nav__item" src="./src/img/logo.png" alt="Page logo"></a>
+                <button class="nav__item nav-button" href="">sign in</button>
             </div>
         </div>
     </nav>
@@ -30,7 +30,96 @@
                     <br>
                     <button class="intro-button">Let's go!</button>
                 </div>
-                <div class="container__form-bg">
+                <div class="container__cards">
+                    <form class="multiform" data-multi-step>
+                        <div data-step class="card card1">
+                            <h2>choose your sex</h2>
+                            <div class="sex">
+                                <div>
+                                    <img src="./src/img/icons8-male-64.png" alt="" srcset="">
+                                    <input type="radio" id="male" value="male" name="sex">
+                                    <label for="male">&nbsp;male</label>
+                                </div>
+                                <div>
+                                    <img src="./src/img/icons8-female-64.png" alt="" srcset="">
+                                    <input type="radio" id="female" value="female" name="sex">
+                                    <label for="female">&nbsp;female</label>
+                                </div>
+                            </div>
+                            <h2>enter body details</h2>
+                            <div class="body-info">
+                                <div>
+                                    <label for="age">age</label>
+                                    <input type="number" min="1" id="age" placeholder="years">
+                                </div>
+                                <div>
+                                    <label for="height">height</label>
+                                    <input type="number" min="1" id="height" placeholder="centimeters">
+                                </div>
+                                <div>
+                                    <label for="weight">weight</label>
+                                    <input type="number" min="1" id="weight" placeholder="kilograms">
+                                </div>
+                            </div>
+                        </div>
+                        <div data-step class="card card2">
+                            <h2>what is your goal?</h2>
+                            <label for="goal-select">Choose one below:</label>
+                            <select name="goals" id="goal-select" onchange="getGoalValue()">
+                                <option value="">--Show goals--</option>
+                                <option value="reduce">I want to lose some weight!</option>
+                                <option value="maintain">I'm good! Thanks!</option>
+                                <option value="gain">I want to get bigger!</option>
+                            </select>
+                            <label for="start-date">Start date:</label>
+                            <input type="date" id="start-date" onchange="getStartDate()" name="start-date">
+                            <label for="activity-select">Pick your daily activity level:</label>
+                            <select name="activity-select" id="activity-select" onchange="getActivityValue()">
+                                <option value="">--Show activities--</option>
+                                <option value="1">1. None</option>
+                                <option value="2">2. Light</option>
+                                <option value="3">3. Moderate</option>
+                                <option value="4">4. Active</option>
+                                <option value="5">5. Vigorous</option>
+                            </select>
+                            <div class="description">
+                                <p>Description:</p>
+                                <p>1. None - lack of physical activity of any sort (people laying down, sick)</p>
+                                <p>2. Light - sedentary lifestyle + light workouts up to 3 times a week </p>
+                                <p>3. Moderate - sedentary work + medium / intensive workouts OR physical work +
+                                    moderate training sessions</p>
+                                <p>4. Active - very active lifestyle at both work and sports</p>
+                                <p>5. Vigorous - challenging everyday work + professional sports practice</p>
+                            </div>
+                        </div>
+                        <div data-step class="card card3">
+                            <h2>Final results:</h2>
+                            <p>Your new calorie intake level is:</p>
+                            <p><span class="text-gradient">2500 kcal</span></p>
+                            <p>To achieve the goal of losing weight!</p>
+                            <p>Here is a summary note to save in your fitness journal:
+                            </p>
+                            <div class="note">
+                            </div>
+                            <button type="submit">Submit</button>
+                        </div>
+                        <div class="progress-container">
+                            <div class="steps">
+                                <span class="circle">1</span>
+                                <span class="circle">2</span>
+                                <span class="circle">3</span>
+                                <div class="progress-bar">
+                                    <span class="indicator"></span>
+                                </div>
+                            </div>
+                            <div class="progress-buttons">
+                                <button data-previous type="button" id="prev" class="progress-btn" disabled>Back</button>
+                                <button data-next type="button" id="next" class="progress-btn">Next</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <dialog class="dialog">
                     <form class="form" autocomplete="off">
                         <div class="form__title">
                             <h2>login</h2>
@@ -45,14 +134,17 @@
                         </div>
                         <div class="form__links">
                             <div class="form__link"><a href="">forgot password?</a></div>
-                            <div class="form__link"><a href="">signup</a></div>
+                            <div class="form__link"><a href="">Register</a></div>
                         </div>
-                        <button type="submit" class="form__btn">login</button>
+                        <button type="submit" class="form__btn" tabindex="0">login</button>
+                        <button type="submit" class="form__btn close-btn " formmethod="dialog"
+                            tabindex="0">cancel</button>
                     </form>
-                </div>
-                <div class="container__card"></div>
+                </dialog>
             </div>
+
         </div>
+
     </main>
     <footer>
         <div class="wrapper">
