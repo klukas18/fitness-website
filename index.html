@@ -17,7 +17,7 @@
         <div class="wrapper">
             <div class="nav">
                 <a href="./index.html"><img class="nav__item" src="./src/img/logo.png" alt="Page logo"></a>
-                <button class="nav__item nav-button" href="">sign in</button>
+                <button class="nav__item nav-button">sign in</button>
             </div>
         </div>
     </nav>
@@ -93,15 +93,22 @@
                             </div>
                         </div>
                         <div data-step class="card card3">
-                            <h2>Final results:</h2>
-                            <p>Your new calorie intake level is:</p>
-                            <p><span class="text-gradient">2500 kcal</span></p>
-                            <p>To achieve the goal of losing weight!</p>
-                            <p>Here is a summary note to save in your fitness journal:
-                            </p>
-                            <div class="note">
+                            <div class="card3-text">
+                                <h2>Final results</h2>
+                                <br>
+                                <p>Congratulations on making your very first step into healthier life!</p>
+                                <p>We've prepared this little note to remind you of how things are looking today. Now is
+                                    the time to make little adjustments in your daily life. Get on track to achieve the
+                                    goal of losing weight! Remember, this will take time and patience, don't rush the
+                                    process. Do it step by step.</p>
+                                <br>
+                                <p>Here is a summary note to save in your fitness journal:
+                                </p>
                             </div>
-                            <button type="submit">Submit</button>
+                            <div class="card3-note">
+                                <p>New calorie intake:</p>
+                                <p><span class="text-gradient">2500 kcal</span></p>
+                            </div>
                         </div>
                         <div class="progress-container">
                             <div class="steps">
@@ -113,7 +120,8 @@
                                 </div>
                             </div>
                             <div class="progress-buttons">
-                                <button data-previous type="button" id="prev" class="progress-btn" disabled>Back</button>
+                                <button data-previous type="button" id="prev" class="progress-btn"
+                                    disabled>Back</button>
                                 <button data-next type="button" id="next" class="progress-btn">Next</button>
                             </div>
                         </div>

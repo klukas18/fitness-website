@@ -42,11 +42,6 @@ function showCurrentStep() {
 
 let currentProgressStep = 1
 
-// nextBtn.addEventListener('click', () => {
-// 	cardFirst.style.setProperty('display', 'none')
-// 	cardSecond.style.setProperty('display', 'flex')
-// })
-
 function getGoalValue() {
 	let selectedValue = document.querySelector('#goal-select').value
 	console.log(selectedValue)
