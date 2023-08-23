@@ -247,12 +247,43 @@ nav {
 			}
 			.card3-note {
 				grid-area: 1 / 2 / 2 / 3;
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: repeat(4, 1fr);
+				align-items: center;
 				text-align: center;
 				width: 100%;
 				height: 100%;
 				background-color: #222;
 				border-radius: 20px;
 				border: 1px solid var(--clr-5);
+				.box1 {
+					grid-area: 1 / 1 / 2 / 4;
+					border-bottom: 1px dashed var(--clr-5);
+				}
+				.box2 {
+					grid-area: 2 / 1 / 3 / 2;
+				}
+				.box3 {
+					grid-area: 2 / 2 / 3 / 3;
+					border-inline: 1px dashed var(--clr-5);
+				}
+				.box4 {
+					grid-area: 2 / 3 / 3 / 4;
+				}
+				.box5 {
+					grid-area: 3 / 1 / 4 / 4;
+					border-block: 1px dashed var(--clr-5);
+				}
+				.box6 {
+					grid-area: 4 / 1 / 5 / 4;
+				}
+			}
+			.card3-note > div {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
 			}
 		}
 		.sex {
@@ -288,6 +319,7 @@ nav {
 			input {
 				height: 1.6rem;
 				border-radius: 5px;
+				width: 200px;
 			}
 		}
 		.progress-container {
