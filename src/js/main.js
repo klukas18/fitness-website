@@ -16,6 +16,27 @@ const progressBar = document.querySelector('.indicator')
 const progressButtons = document.querySelectorAll('.progress-btn')
 const footerYear = document.querySelector('.footer-year')
 
+const radioBtns = document.querySelectorAll("input[name='sex']")
+
+let findSelectedRadio = () => {
+	let selected = document.querySelector("input[name='sex']:checked").value
+	console.log(selected)
+}
+radioBtns.forEach((radioBtn) => {
+	radioBtn.addEventListener('change', findSelectedRadio)
+})
+
+const bodyInputs = document.querySelectorAll("input[name='body-params']")
+
+let findBodyParams = () => {
+	let selected = document.querySelectorAll("input[name='body-params']").value
+	console.log(selected)
+}
+
+bodyInputs.forEach((bodyInput) => {
+	bodyInput.addEventListener('change', findBodyParams)
+})
+
 let currentStep = formSteps.findIndex((step) => {
 	return step.classList.contains('active')
 })
