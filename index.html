@@ -50,16 +50,29 @@
                             <div class="body-info">
                                 <div>
                                     <label for="age">age</label>
-                                    <input type="number" name="body-params" min="1" id="age" placeholder="years">
+                                    <div style="display: inline-block;">
+                                        <input type="number" min="1" max="100" step="1" name="body-params" id="age"
+                                            placeholder=" 1-100 years" onchange="getAgeValue()">
+                                        <span class="validity"></span>
+                                    </div>
                                 </div>
                                 <div>
                                     <label for="height">height</label>
-                                    <input type="number" name="body-params" min="1" id="height"
-                                        placeholder="centimeters">
+                                    <div style="display: inline-block;"><input type="number" min="1" max="250" step="1"
+                                            name="body-params" id="height" placeholder=" 1-250 centimeters"
+                                            onchange="getHeightValue()" required>
+                                        <span class="validity"></span>
+                                    </div>
+
                                 </div>
                                 <div>
                                     <label for="weight">weight</label>
-                                    <input type="number" name="body-params" min="1" id="weight" placeholder="kilograms">
+                                    <div style="display: inline-block;"><input type="number" min="1" max="300" step="1"
+                                            name="body-params" id="weight" placeholder=" 1-300 kilograms"
+                                            onchange="getWeightValue()" required>
+                                        <span class="validity"></span>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -108,22 +121,22 @@
                             </div>
                             <div class="card3-note">
                                 <div class="box1">
-                                    <p>I'm here <br>Date: 20.20.2000</p>
+                                    <p>Your journey begins: <br><span class="date-insert"></span></p>
                                 </div>
                                 <div class="box2">
-                                    <p>Age:<br>30</p>
+                                    <p>Age:<br><span class="age-insert"></span></p>
                                 </div>
                                 <div class="box3">
-                                    <p>height:<br>190</p>
+                                    <p>height:<br><span class="height-insert"></span></p>
                                 </div>
                                 <div class="box4">
-                                    <p>weight:<br>70</p>
+                                    <p>weight:<br><span class="weight-insert"></span></p>
                                 </div>
                                 <div class="box5">
                                     <p>Body Mass Index (BMI): 25<br>Daily needs: 3300 kcal</p>
                                 </div>
                                 <div class="box6">
-                                    <p>New calorie intake:
+                                    <p>New calorie intake to reach your goal:
                                         <br><span class="text-gradient">2500 kcal</span>
                                     </p>
                                 </div>

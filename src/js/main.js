@@ -5,9 +5,6 @@ const introPage = document.querySelector('.container__intro')
 const cardPage = document.querySelector('.container__cards')
 const multiStepForm = document.querySelector('[data-multi-step]')
 const formSteps = [...multiStepForm.querySelectorAll('[data-step]')]
-const cardFirst = document.querySelector('.card1')
-const cardSecond = document.querySelector('.card2')
-const cardThird = document.querySelector('.card3')
 const prevBtn = document.querySelector('#prev')
 const nextBtn = document.querySelector('#next')
 const dialog = document.querySelector('.dialog')
@@ -26,16 +23,22 @@ radioBtns.forEach((radioBtn) => {
 	radioBtn.addEventListener('change', findSelectedRadio)
 })
 
-const bodyInputs = document.querySelectorAll("input[name='body-params']")
-
-let findBodyParams = () => {
-	let selected = document.querySelectorAll("input[name='body-params']").value
-	console.log(selected)
+function getAgeValue() {
+	let selectedValue = document.querySelector('#age').value
+	document.querySelector('.age-insert').innerHTML = `${selectedValue}`
+	console.log(selectedValue)
+}
+function getHeightValue() {
+	let selectedValue = document.querySelector('#height').value
+	document.querySelector('.height-insert').innerHTML = `${selectedValue}`
+	console.log(selectedValue)
+}
+function getWeightValue() {
+	let selectedValue = document.querySelector('#weight').value
+	document.querySelector('.weight-insert').innerHTML = `${selectedValue}`
+	console.log(selectedValue)
 }
 
-bodyInputs.forEach((bodyInput) => {
-	bodyInput.addEventListener('change', findBodyParams)
-})
 
 let currentStep = formSteps.findIndex((step) => {
 	return step.classList.contains('active')
@@ -70,8 +73,9 @@ function getGoalValue() {
 
 function getStartDate() {
 	let selectedValue = document.querySelector('#start-date').value
-	console.log(selectedValue)
+	document.querySelector('.date-insert').innerHTML = `${selectedValue}`
 }
+
 function getActivityValue() {
 	let selectedValue = document.querySelector('#activity-select').value
 	console.log(selectedValue)

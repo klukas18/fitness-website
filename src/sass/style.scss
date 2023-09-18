@@ -134,7 +134,7 @@ nav {
 	padding: 0 var(--padding-2);
 
 	&__intro {
-		display: flex;
+		display: none;
 		flex-direction: column;
 		letter-spacing: 0.5rem;
 		color: #fff;
@@ -199,7 +199,7 @@ nav {
 	}
 	&__cards {
 		position: relative;
-		display: none;
+		display: flex;
 		height: 60vh;
 		justify-content: center;
 		width: 75%;
@@ -221,6 +221,7 @@ nav {
 				text-transform: uppercase;
 			}
 		}
+
 		.card {
 			display: none;
 			flex-direction: column;
@@ -321,6 +322,17 @@ nav {
 				height: 1.6rem;
 				border-radius: 5px;
 				width: 200px;
+			}
+			input:invalid + span::after {
+				content: '✖';
+				color: #f6412d;
+				padding-left: 5px;
+			}
+
+			input:valid + span::after {
+				content: '✓';
+				color: #2df637;
+				padding-left: 5px;
 			}
 		}
 		.progress-container {
