@@ -134,7 +134,7 @@ nav {
 	padding: 0 var(--padding-2);
 
 	&__intro {
-		display: none;
+		display: flex;
 		flex-direction: column;
 		letter-spacing: 0.5rem;
 		color: #fff;
@@ -199,7 +199,7 @@ nav {
 	}
 	&__cards {
 		position: relative;
-		display: flex;
+		display: none;
 		height: 60vh;
 		justify-content: center;
 		width: 75%;

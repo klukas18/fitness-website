@@ -12,7 +12,6 @@ const circles = document.querySelectorAll('.circle')
 const progressBar = document.querySelector('.indicator')
 const progressButtons = document.querySelectorAll('.progress-btn')
 const footerYear = document.querySelector('.footer-year')
-
 const radioBtns = document.querySelectorAll("input[name='sex']")
 
 let findSelectedRadio = () => {
@@ -38,7 +37,6 @@ function getWeightValue() {
 	document.querySelector('.weight-insert').innerHTML = `${selectedValue}`
 	console.log(selectedValue)
 }
-
 
 let currentStep = formSteps.findIndex((step) => {
 	return step.classList.contains('active')
